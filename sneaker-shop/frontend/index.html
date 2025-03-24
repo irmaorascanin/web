@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoleArt - Artistic Sneakers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">SoleArt</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('home')">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#shop" onclick="loadPage('shop')">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about" onclick="loadPage('about')">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" onclick="loadPage('contact')">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="./views/login.html" onclick="loadPage('login')">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="./views/register.html" onclick="loadPage('register')">Register</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+ <div id="content"></div>
+
+<!-- Hero Section -->
+<header class="hero d-flex justify-content-center align-items-center">
+    <div class="hero-content text-center">
+        <h1 class="display-4 text-white">Step into Art, Step into SoleArt</h1>
+        <p class="lead text-white">Discover exclusive, artistic sneakers designed for the bold.</p>
+        <a href="#shop" class="btn btn-light btn-lg">Explore the Collection</a>
+    </div>
+</header>
+
+<!-- Shop Section -->
+<section id="shop" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">LATEST FOOTWEAR ARRIVALS</h2>
+        <div class="row">
+            <!-- Sneaker Products -->
+            <div class="col-md-4 mb-4">
+                <div class="shop-card zoom" onclick="openModal('AIR JORDAN AIR 1 RETRO LOW OG', 'assets/images/jordan.png', '159.99 €')">
+                    <img src="assets/images/jordan.png" alt="Sneaker 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">AIR JORDAN AIR 1 RETRO LOW OG</h5>
+                        <p class="card-text">159.99 €</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="shop-card zoom" onclick="openModal('PUMA GV SPECIAL THE NEVERWORN V', 'assets/images/puma.png', '119.99 €')">
+                    <img src="assets/images/puma.png" alt="Sneaker 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">PUMA GV SPECIAL THE NEVERWORN</h5>
+                        <p class="card-text">119.99 €</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="shop-card zoom" onclick="openModal('ADIDAS ORIGINALS HANDBALL', 'assets/images/adidas.png', '109.99 €')">
+                    <img src="assets/images/adidas.png" alt="Sneaker 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">ADIDAS ORIGINALS HANDBALL</h5>
+                        <p class="card-text">109.99 €</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="shop-card zoom" onclick="openModal('THE NORTH FACE HEDGEHOG 06', 'assets/images/northface.png', '129.99 €')">
+                    <img src="assets/images/northface.png" alt="Sneaker 4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">THE NORTH FACE HEDGEHOG 06</h5>
+                        <p class="card-text">109.99 €</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="shop-card zoom" onclick="openModal('ASICS GEL-NYC', 'assets/images/as1.png', '149.99 €')">
+                    <img src="assets/images/as1.png" alt="Sneaker 5">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">ASICS GEL-NYC</h5>
+                        <p class="card-text">149.99 €</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="shop-card zoom" onclick="openModal('PUMA KING INDOOR ROYALTY', 'assets/images/puma2.png', '119.99 €')">
+                    <img src="assets/images/puma2.png" alt="Sneaker 6">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">PUMA KING INDOOR ROYALTY</h5>
+                        <p class="card-text">119.99 €</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="shop-card zoom" onclick="openModal('NEW BALANCE U 740 WN2', 'assets/images/newbalance.png', '119.99 €')">
+                    <img src="assets/images/newbalance.png" alt="Sneaker 7">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">NEW BALANCE U 740 WN2</h5>
+                        <p class="card-text">119.99 €</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="shop-card zoom" onclick="openModal('PUMA WMNS SPEEDCAT GO', 'assets/images/puma3.png', '89.99 €')">
+                    <img src="assets/images/puma3.png" alt="Sneaker 8">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">PUMA WMNS SPEEDCAT GO</h5>
+                        <p class="card-text">89.99 €</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="shop-card zoom" onclick="openModal('ADIDAS ORIGINALS WMNS SL 72 OG', 'assets/images/adidas2.png', '99.99 €')">
+                    <img src="assets/images/adidas2.png" alt="Sneaker 9">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">ADIDAS ORIGINALS WMNS SL 72 OG</h5>
+                        <p class="card-text">99.99 €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productTitle"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="productImage" class="img-fluid mb-3" alt="Product">
+                <p id="productPrice" class="fs-5 fw-bold"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="about" class="about-container">
+    <h2>About Us</h2>
+    <p>At SoleArt, we blend the world of art with high-end sneakers. Our exclusive collection features only the most creative and unique designs, crafted for those who walk with style.</p>
+    
+    <blockquote class="sneaker-quote">
+        “A shoe is not just a design, but a part of a person’s identity.”  
+        <span>— Tinker Hatfield</span>
+    </blockquote>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="text-white">
+    <div class="container text-center">
+        <h2>Contact Us</h2>
+        <p class="lead">Have any questions? Get in touch with us below.</p>
+        <a href="mailto:contact@solearte.com" class="btn btn-light">Email Us</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center text-white">
+    <p>&copy; 2025 SoleArt. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function openModal(title, image, price) {
+        document.getElementById('productTitle').textContent = title;
+        document.getElementById('productImage').src = image;
+        document.getElementById('productPrice').textContent = price;
+        var myModal = new bootstrap.Modal(document.getElementById('productModal'));
+        myModal.show();
+    }
+</script>
+</body>
+</html>
