@@ -39,3 +39,11 @@ Flight::route('GET /docs', function () {
 });
 
 Flight::start();
+
+require_once __DIR__ . '/middleware/AuthMiddleware.php';
+require_once __DIR__ . '/middleware/RoleMiddleware.php';
+require_once __DIR__ . '/routes/AuthRoutes.php';
+
+require_once __DIR__ . '/middleware/RequestValidationMiddleware.php';
+require_once __DIR__ . '/middleware/ErrorHandlerMiddleware.php';
+require_once __DIR__ . '/middleware/LoggingMiddleware.php';
